@@ -1,8 +1,3 @@
-// // 사용자가 텍스트를 드래그하는 중에 선택된 텍스트를 감지
-// document.addEventListener('selectionchange', function() {
-//     const selectedText = window.getSelection().toString().trim();
-// });
-
 // 드래그가 끝났을 때 번역 버튼을 표시
 document.addEventListener('mouseup', function(event) {
     const selectedText = window.getSelection().toString().trim();
@@ -43,13 +38,7 @@ function showTranslateButton(event, selectedText) {
         console.log("번역 버튼이 클릭되었습니다.");
         fetchTranslation(selectedText, translateButton);
     });
-
-    // // 버튼 외부를 클릭하면 버튼 제거
-    // setTimeout(() => {
-    //     document.addEventListener("click", handleOutsideClick);
-    // }, 0);
 }
-
 
 // 기존 버튼 제거 함수
 function removeExistingButton() {
@@ -57,15 +46,6 @@ function removeExistingButton() {
     const existingButtons = document.querySelectorAll(".translate-button");
     existingButtons.forEach(button => button.remove());
 }
-
-// 외부 클릭 처리 함수
-// function handleOutsideClick(event) {
-//     const isTranslateButton = event.target.closest(".translate-button");
-//     if (!isTranslateButton) {
-//         removeExistingButton();
-//         document.removeEventListener("click", handleOutsideClick); // 이벤트 제거
-//     }
-// }
 
 // 번역 API 호출 함수
 async function fetchTranslation(text, button) {
