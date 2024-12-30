@@ -20,6 +20,7 @@ document.addEventListener('mouseup', function(event) {
 // 번역 버튼을 표시하는 함수
 function showTranslateButton(event, selectedText) {
     // 기존 번역 버튼 제거
+    removeExistingButton();
     const translateButton = document.createElement("button");
     translateButton.textContent = "번역";
     translateButton.className = "translate-button";
