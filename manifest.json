@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Text Translator",
+  "name": "BeonGPT",
   "version": "1.0",
   "description": "Translate selected English text to Korean using ChatGPT API.",
   "permissions": [
